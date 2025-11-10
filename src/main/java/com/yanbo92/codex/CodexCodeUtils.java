@@ -1,4 +1,4 @@
-package com.hamdiwanis.claude;
+package com.yanbo92.codex;
 
 import com.intellij.notification.Notification;
 import com.intellij.notification.NotificationGroup;
@@ -13,12 +13,12 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 
 /**
- * Shared utility methods for Claude Code plugin
+ * Shared utility methods for Codex Code plugin
  */
-public final class ClaudeCodeUtils {
-    private static final String NOTIF_GROUP_ID = "claude.code.notifications";
+public final class CodexCodeUtils {
+    private static final String NOTIF_GROUP_ID = "codex.code.notifications";
 
-    private ClaudeCodeUtils() {
+    private CodexCodeUtils() {
         // Utility class - no instantiation
     }
 
@@ -60,7 +60,8 @@ public final class ClaudeCodeUtils {
         NotificationGroup group = NotificationGroupManager.getInstance().getNotificationGroup(NOTIF_GROUP_ID);
         Notification notification = (group != null)
                 ? group.createNotification(msg, type)
-                : new Notification(NOTIF_GROUP_ID, "Claude Code", msg, type);
+                : new Notification(NOTIF_GROUP_ID, "Codex Code", msg, type);
         Notifications.Bus.notify(notification, project);
     }
 }
+

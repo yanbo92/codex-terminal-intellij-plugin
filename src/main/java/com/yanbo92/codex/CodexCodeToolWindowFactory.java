@@ -1,4 +1,4 @@
-package com.hamdiwanis.claude;
+package com.yanbo92.codex;
 
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.application.ApplicationManager;
@@ -16,12 +16,12 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.File;
 
-public class ClaudeCodeToolWindowFactory implements ToolWindowFactory {
-    public static final String TOOL_WINDOW_ID = "Claude Code";
+public class CodexCodeToolWindowFactory implements ToolWindowFactory {
+    public static final String TOOL_WINDOW_ID = "Codex Code";
     public static final com.intellij.openapi.util.Key<ShellTerminalWidget> WIDGET_KEY =
-            com.intellij.openapi.util.Key.create("CLAUDE_CODE_WIDGET");
+            com.intellij.openapi.util.Key.create("CODEX_CODE_WIDGET");
     private static final com.intellij.openapi.util.Key<Boolean> AUTORUN_DONE_KEY =
-            com.intellij.openapi.util.Key.create("CLAUDE_CODE_AUTORUN_DONE");
+            com.intellij.openapi.util.Key.create("CODEX_CODE_AUTORUN_DONE");
 
     @Override
     public void createToolWindowContent(@NotNull Project project, @NotNull ToolWindow toolWindow) {
@@ -51,6 +51,7 @@ public class ClaudeCodeToolWindowFactory implements ToolWindowFactory {
     }
 
     private void autorun(Project project, ShellTerminalWidget widget, String workDir) {
-        ClaudeCodeUtils.exec(project, widget, "claude");
+        CodexCodeUtils.exec(project, widget, "codex");
     }
 }
+

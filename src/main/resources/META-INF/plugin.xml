@@ -1,18 +1,18 @@
 <idea-plugin>
-    <id>com.hamdiwanis.claude</id>
-    <name>Claude Code Terminal</name>
+    <id>com.yanbo92.codex</id>
+    <name>Codex Code Terminal</name>
     <version>1.0.0</version>
 
-    <vendor email="hamdiwanis@gmail.com" url="https://github.com/hamdiwanis">Hamdi Wanis</vendor>
+    <vendor email="yanbo92@139.com" url="https://github.com/yanbo92">Yanbo92</vendor>
 
     <!-- 兼容范围：232+ 覆盖 2023.2 起的大多数版本。后续可再调大/小。 -->
     <idea-version since-build="232.0" />
 
     <description><![CDATA[
-<p><b>Claude Code Terminal</b> — Run <code>claude</code> (Claude Code CLI) seamlessly inside IntelliJ-based IDEs.
+<p><b>Codex Code Terminal</b> — Run <code>codex</code> (Codex Code CLI) seamlessly inside IntelliJ-based IDEs.
 No more switching to external terminals.</p>
 
-<p>在 IntelliJ IDEA / Android Studio 内直接运行 <code>claude</code> (Claude Code CLI) —— 无需切换外部终端。</p>
+<p>在 IntelliJ IDEA / Android Studio 内直接运行 <code>codex</code> (Codex Code CLI) —— 无需切换外部终端。</p>
 
 <hr/>
 
@@ -20,8 +20,8 @@ No more switching to external terminals.</p>
 <ul>
   <li><b>一键聚焦 / 重启</b> — 用 Tools → Focus / Restart 快速切换终端；按住 Shift 即可重建会话。<br/>
       One-click focus & restart (hold Shift to clean restart).</li>
-  <li><b>自动启动 / Auto-start</b> — PATH 中检测到 <code>claude</code> 即自动运行，无需额外配置。<br/>
-      Auto-starts if <code>claude</code> is on PATH.</li>
+  <li><b>自动启动 / Auto-start</b> — PATH 中检测到 <code>codex</code> 即自动运行，无需额外配置。<br/>
+      Auto-starts if <code>codex</code> is on PATH.</li>
   <li><b>界面简洁 / Clean UI</b> — 独立右侧 ToolWindow，隐藏底部 Terminal，避免重复窗口。<br/>
       Dedicated right-side ToolWindow; bottom terminal stays hidden.</li>
   <li><b>智能提示 / Smart Hints</b> — 未检测到 CLI 时自动气泡提醒，安装后重新打开即可。<br/>
@@ -32,9 +32,9 @@ No more switching to external terminals.</p>
 
 <h3>🛠 使用场景 / Why Use It</h3>
 <ul>
-  <li>将 <b>Claude Code CLI</b> 无缝嵌入 IDE，边写代码边使用 Claude。</li>
+  <li>将 <b>Codex Code CLI</b> 无缝嵌入 IDE，边写代码边使用 Codex。</li>
   <li>避免 IDE 与外部终端来回切换，提高效率。</li>
-  <li>更符合日常 Claude Code 工作流习惯。</li>
+  <li>更符合日常 Codex Code 工作流习惯。</li>
 </ul>
 
 <hr/>
@@ -46,12 +46,12 @@ No more switching to external terminals.</p>
     <change-notes><![CDATA[
 <h3>1.0.0</h3>
 <ul>
-  <li><b>Initial Release / 初始版本:</b> Converted from Cursor CLI Terminal to Claude Code Terminal.<br/>
-      从 Cursor CLI Terminal 转换为 Claude Code Terminal。</li>
-  <li><b>Claude Code Support / 支持 Claude Code:</b> Run <code>claude</code> CLI seamlessly inside right-side ToolWindow.<br/>
-      在右侧工具窗内无缝运行 <code>claude</code> CLI。</li>
-  <li><b>Auto-start / 自动启动:</b> Automatically detects and starts Claude Code CLI when available in PATH.<br/>
-      自动检测并启动 PATH 中的 Claude Code CLI。</li>
+  <li><b>Initial Release / 初始版本:</b> Converted from Cursor CLI Terminal to Codex Code Terminal.<br/>
+      从 Cursor CLI Terminal 转换为 Codex Code Terminal。</li>
+  <li><b>Codex Code Support / 支持 Codex Code:</b> Run <code>codex</code> CLI seamlessly inside right-side ToolWindow.<br/>
+      在右侧工具窗内无缝运行 <code>codex</code> CLI。</li>
+  <li><b>Auto-start / 自动启动:</b> Automatically detects and starts Codex Code CLI when available in PATH.<br/>
+      自动检测并启动 PATH 中的 Codex Code CLI。</li>
   <li><b>Focus & Restart / 聚焦与重启:</b> Quick shortcuts to focus or restart (hold Shift for clean restart).<br/>
       快速聚焦或重启（按住 Shift 可完全重启）。</li>
   <li><b>Clean UI / 简洁界面:</b> Dedicated right-side ToolWindow, bottom terminal stays hidden.<br/>
@@ -66,21 +66,21 @@ No more switching to external terminals.</p>
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow
-                id="Claude Code"
+                id="Codex Code"
                 anchor="right"
-                factoryClass="com.hamdiwanis.claude.ClaudeCodeToolWindowFactory"
+                factoryClass="com.yanbo92.codex.CodexCodeToolWindowFactory"
                 canCloseContents="true"
                 icon="/icons/agent_gray.svg"/>
         <notificationGroup
-                id="claude.code.notifications"
+                id="codex.code.notifications"
                 displayType="BALLOON"
                 isLogByDefault="true"/>
     </extensions>
 
     <actions>
-        <action id="ClaudeCode.StartAction"
-                class="com.hamdiwanis.claude.StartClaudeCodeAction"
-                text="Focus / Restart Claude Code Terminal"
+        <action id="CodexCode.StartAction"
+                class="com.yanbo92.codex.StartCodexCodeAction"
+                text="Focus / Restart Codex Code Terminal"
                 description="Focus the ToolWindow; hold Shift to restart the session">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
             <keyboard-shortcut keymap="$default" first-keystroke="ctrl shift C"/>

@@ -1,4 +1,4 @@
-package com.hamdiwanis.claude;
+package com.yanbo92.codex;
 
 import com.intellij.notification.NotificationType;
 import com.intellij.openapi.actionSystem.AnAction;
@@ -12,7 +12,7 @@ import org.jetbrains.annotations.NotNull;
 
 import java.awt.event.InputEvent;
 
-public class StartClaudeCodeAction extends AnAction {
+public class StartCodexCodeAction extends AnAction {
 
     @Override
     public void actionPerformed(@NotNull AnActionEvent e) {
@@ -25,9 +25,9 @@ public class StartClaudeCodeAction extends AnAction {
         ApplicationManager.getApplication().invokeLater(() -> {
             try {
                 ToolWindow tw = ToolWindowManager.getInstance(project)
-                        .getToolWindow(ClaudeCodeToolWindowFactory.TOOL_WINDOW_ID);
+                        .getToolWindow(CodexCodeToolWindowFactory.TOOL_WINDOW_ID);
                 if (tw == null) {
-                    ClaudeCodeUtils.notify(project, "未找到工具窗：" + ClaudeCodeToolWindowFactory.TOOL_WINDOW_ID, NotificationType.ERROR);
+                    CodexCodeUtils.notify(project, "未找到工具窗：" + CodexCodeToolWindowFactory.TOOL_WINDOW_ID, NotificationType.ERROR);
                     return;
                 }
                 // 打开并聚焦
@@ -37,7 +37,7 @@ public class StartClaudeCodeAction extends AnAction {
 
                 // 没内容就创建一次（createToolWindowContent 内部会 autorun）
                 if (cm.getContentCount() == 0) {
-                    new ClaudeCodeToolWindowFactory().createToolWindowContent(project, tw);
+                    new CodexCodeToolWindowFactory().createToolWindowContent(project, tw);
                     return; // autorun 会负责启动
                 }
 
@@ -53,14 +53,15 @@ public class StartClaudeCodeAction extends AnAction {
                             cm.removeContent(c, true);
                         }
                     }
-                    new ClaudeCodeToolWindowFactory().createToolWindowContent(project, tw);
+                    new CodexCodeToolWindowFactory().createToolWindowContent(project, tw);
                     return; // 不要在这里执行任何命令
                 }
 
                 // 非重启：什么都不做（会话已在 autorun 中启动过），仅保持聚焦
             } catch (Throwable ex) {
-                ClaudeCodeUtils.notify(project, "执行失败：" + ex.getMessage(), NotificationType.ERROR);
+                CodexCodeUtils.notify(project, "执行失败：" + ex.getMessage(), NotificationType.ERROR);
             }
         });
     }
 }
+

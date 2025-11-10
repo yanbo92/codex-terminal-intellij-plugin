@@ -1,4 +1,4 @@
-# Claude Code Terminal
+# Codex Code Terminal
 
 Based on the great work of [lupishan](https://github.com/lupishan/cursor-cli-terminal)
 
@@ -8,27 +8,27 @@ Based on the great work of [lupishan](https://github.com/lupishan/cursor-cli-ter
 
 ## English
 
-A JetBrains IDE plugin that runs `claude` (Claude Code CLI) directly inside your IDE via an integrated terminal window.
+A JetBrains IDE plugin that runs `codex` (Codex Code CLI) directly inside your IDE via an integrated terminal window.
 
 ### ✨ Features
 
 - **One-click access**: Opens in a dedicated tool window on the right side
-- **Auto-start**: Automatically launches `claude` when you open the tool window
+- **Auto-start**: Automatically launches `codex` when you open the tool window
 - **Seamless integration**: Works like a native IDE terminal
-- **Smart detection**: Automatically finds `claude` in your PATH
-- **Focus & Restart**: Quick shortcuts to focus or restart Claude Code (hold Shift to clean restart)
+- **Smart detection**: Automatically finds `codex` in your PATH
+- **Focus & Restart**: Quick shortcuts to focus or restart Codex Code (hold Shift to clean restart)
 - **Privacy-first**: No network calls, no data collection
 
 ### 📋 Requirements
 
 - IntelliJ IDEA 2023.2+ (or any JetBrains IDE: PyCharm, WebStorm, PhpStorm, etc.)
-- `claude` CLI installed and available in your PATH
+- `codex` CLI installed and available in your PATH
 
 ### 📦 Installation
 
 **From JetBrains Marketplace:**
 1. Open IDE → Settings → Plugins → Marketplace
-2. Search for "Claude Code Terminal"
+2. Search for "Codex Code Terminal"
 3. Click Install
 
 **From Source:**
@@ -38,9 +38,9 @@ A JetBrains IDE plugin that runs `claude` (Claude Code CLI) directly inside your
 
 ### 🚀 Usage
 
-1. Open the "Claude Code Terminal" tool window from the right sidebar
-2. The `claude` CLI will start automatically if detected in your PATH
-3. Use **Tools → Focus / Restart Claude Code Terminal** (`Ctrl+Shift+C` on Windows/Linux, `Cmd+Shift+C` on Mac) to:
+1. Open the "Codex Code Terminal" tool window from the right sidebar
+2. The `codex` CLI will start automatically if detected in your PATH
+3. Use **Tools → Focus / Restart Codex Code Terminal** (`Ctrl+Shift+C` on Windows/Linux, `Cmd+Shift+C` on Mac) to:
    - Focus the tool window (normal click)
    - Restart the session (hold Shift while clicking)
 
@@ -57,10 +57,10 @@ A JetBrains IDE plugin that runs `claude` (Claude Code CLI) directly inside your
 ```
 
 **Project Structure:**
-- `src/main/java/com/hamdiwanis/claude/` - Plugin source code
-  - `ClaudeToolWindowFactory.java` - Creates the tool window and terminal widget
-  - `StartClaudeCodeAction.java` - Handles focus/restart actions
-  - `ClaudeCodeUtils.java` - Shared utility methods
+- `src/main/java/com/yanbo92/codex/` - Plugin source code
+  - `CodexToolWindowFactory.java` - Creates the tool window and terminal widget
+  - `StartCodexCodeAction.java` - Handles focus/restart actions
+  - `CodexCodeUtils.java` - Shared utility methods
 - `src/main/resources/` - Plugin resources (icons, plugin.xml)
 - `build.gradle` - Build configuration
 
@@ -75,11 +75,11 @@ Contributions are welcome! Please feel free to submit issues or pull requests.
 
 ### ❓ FAQ
 
-**Q: "claude not detected" error**
-A: Make sure `claude` CLI is installed and in your PATH. You can install it from [Claude Code documentation](https://docs.claude.com/docs/claude-code). Restart the IDE after installation.
+**Q: "codex not detected" error**
+A: Make sure `codex` CLI is installed and in your PATH. You can install it from [Codex Code documentation](https://docs.codex.com/docs/codex-code). Restart the IDE after installation.
 
 **Q: First-time authentication prompts**
-A: Follow the interactive prompts in the terminal window to authenticate with your Anthropic account.
+A: Follow the interactive prompts in the terminal window to authenticate with your account.
 
 **Q: Does this work with other JetBrains IDEs?**
 A: Yes! Works with PyCharm, WebStorm, PhpStorm, and all IntelliJ-based IDEs.
@@ -96,31 +96,31 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 ### ⚠️ Disclaimer
 
-This plugin is an independent project and is **not affiliated with or endorsed by Anthropic** or any other third-party vendors. It does not bundle, download, or install `claude` CLI.
+This plugin is an independent project and is **not affiliated with or endorsed by Anthropic** or any other third-party vendors. It does not bundle, download, or install `codex` CLI.
 
 ---
 
 ## 中文
 
-在 IntelliJ IDEA 右侧工具窗内，以交互式终端运行本地 `claude` (Claude Code CLI)。打开工具窗即可进入，直接在里面操作即可。
+在 IntelliJ IDEA 右侧工具窗内，以交互式终端运行本地 `codex` (Codex Code CLI)。打开工具窗即可进入，直接在里面操作即可。
 
 ### ✨ 功能亮点
 
 - **一键聚焦/重启**: 用快捷键快速切换终端；按住 Shift 即可重建会话
-- **自动启动**: PATH 中检测到 `claude` 即自动运行，无需额外配置
+- **自动启动**: PATH 中检测到 `codex` 即自动运行，无需额外配置
 - **界面简洁**: 独立右侧 ToolWindow，隐藏底部 Terminal，避免重复窗口
 - **智能提示**: 未检测到 CLI 时自动气泡提醒
 
 ### 📋 要求
 
 - IntelliJ IDEA 2023.2+（或任何 JetBrains IDE：PyCharm、WebStorm、PhpStorm 等）
-- 终端中可执行 `claude`（需自行安装并加入 PATH）
+- 终端中可执行 `codex`（需自行安装并加入 PATH）
 
 ### 📦 安装
 
 **从 Marketplace 安装：**
 1. 打开 IDE → Settings → Plugins → Marketplace
-2. 搜索 "Claude Code Terminal"
+2. 搜索 "Codex Code Terminal"
 3. 点击安装
 
 **从源码安装：**
@@ -130,9 +130,9 @@ This plugin is an independent project and is **not affiliated with or endorsed b
 
 ### 🚀 用法
 
-1. 打开右侧 "Claude Code Terminal" 工具窗
-2. 若已安装 `claude` 将自动启动
-3. 使用 **Tools → Focus / Restart Claude Code Terminal**（`Ctrl+Shift+C`）：
+1. 打开右侧 "Codex Code Terminal" 工具窗
+2. 若已安装 `codex` 将自动启动
+3. 使用 **Tools → Focus / Restart Codex Code Terminal**（`Ctrl+Shift+C`）：
    - 普通点击：聚焦工具窗
    - 按住 Shift：重启会话
 
@@ -150,11 +150,11 @@ This plugin is an independent project and is **not affiliated with or endorsed b
 
 ### ❓ 常见问题
 
-**提示未检测到 claude？**
-请从 [Claude Code 文档](https://docs.claude.com/docs/claude-code) 安装 CLI，并确保 `claude` 在 PATH 中；重开工具窗或重启 IDE 后重试。
+**提示未检测到 codex？**
+请从 [Codex Code 文档](https://docs.codex.com/docs/codex-code) 安装 CLI，并确保 `codex` 在 PATH 中；重开工具窗或重启 IDE 后重试。
 
 **首次弹出认证/登录界面？**
-在该终端内按提示操作即可，使用 Anthropic 账户认证。
+在该终端内按提示操作即可，使用账户认证。
 
 ### 🔒 隐私
 
@@ -166,4 +166,4 @@ MIT License - 详见 [LICENSE](LICENSE) 文件
 
 ### ⚠️ 免责声明
 
-本插件为独立项目，与 Anthropic 或任何第三方供应商无关；不打包/下载/安装 `claude` CLI，也不收集数据。
+本插件为独立项目，与 Anthropic 或任何第三方供应商无关；不打包/下载/安装 `codex` CLI，也不收集数据。

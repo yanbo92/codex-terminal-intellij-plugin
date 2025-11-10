@@ -108,7 +108,7 @@ Before submitting changes:
 
 ## 🎨 Adapting for Other CLI Tools
 
-This plugin can serve as a template for other CLI integrations (like Claude Code). Key areas to modify:
+This plugin can serve as a template for other CLI integrations (like Codex Code). Key areas to modify:
 
 1. **Plugin Configuration** (`plugin.xml`)
    - Change plugin ID, name, description

@@ -3,7 +3,7 @@ plugins {
     id 'org.jetbrains.intellij' version '1.17.3'
 }
 
-group = 'com.hamdiwanis.claude'
+group = 'com.yanbo92.codex'
 version = '1.0.3'
 
 repositories { mavenCentral() }
